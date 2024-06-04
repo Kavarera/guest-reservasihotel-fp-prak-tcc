@@ -4,7 +4,8 @@ import 'package:fp_fe_reservasihotel_guest/core/routes/api_routes.dart';
 import 'package:http/http.dart' as http;
 
 class BookingService {
-  Future<void> postBooking(Map<String, Object> bookingData) async {
+  Future<Map<String, dynamic>> postBooking(
+      Map<String, Object> bookingData) async {
     final url =
         Uri.parse('${ApiRoutesRepo.baseUrl}${ApiRoutesRepo.postBooking}');
     final http.Response response = await http.post(url,
@@ -15,7 +16,7 @@ class BookingService {
 
     print(jsonEncode(bookingData));
     if (response.statusCode == 200) {
-      return;
+      return jsonDecode(response.body);
     } else {
       print(response.statusCode);
       print(jsonDecode(response.body));

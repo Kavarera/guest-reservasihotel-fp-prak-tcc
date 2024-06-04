@@ -108,32 +108,36 @@ class LandingPage extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                height: MediaQuery.of(context).size.height,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                ),
-                child: Flexible(
-                  child: CarouselSlider(
-                    options: CarouselOptions(
-                        height: MediaQuery.of(context).size.width / 2.9,
-                        autoPlay: true,
-                        enableInfiniteScroll: true),
-                    items: [0, 1, 2, 3].map((i) {
-                      return Builder(
-                        builder: (BuildContext context) {
-                          return RoomCardWidget(
-                            roomName: _roomName[i],
-                            roomPrice: _roomPrice[i],
-                            imageUrl: _imageUrl[i],
-                            controller: rt,
-                          );
-                        },
-                      );
-                    }).toList(),
-                  ),
-                ),
-              )
+              MediaQuery.of(context).size.width >= 1500
+                  ? Container(
+                      height: MediaQuery.of(context).size.height,
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      child: Flexible(
+                        child: CarouselSlider(
+                          options: CarouselOptions(
+                              height: MediaQuery.of(context).size.width / 2.9,
+                              autoPlay: true,
+                              enableInfiniteScroll: true),
+                          items: [0, 1, 2, 3].map((i) {
+                            return Builder(
+                              builder: (BuildContext context) {
+                                return RoomCardWidget(
+                                  roomName: _roomName[i],
+                                  roomPrice: _roomPrice[i],
+                                  imageUrl: _imageUrl[i],
+                                  controller: rt,
+                                );
+                              },
+                            );
+                          }).toList(),
+                        ),
+                      ),
+                    )
+                  : const SizedBox(
+                      width: 1,
+                    )
             ],
           ),
         ),
