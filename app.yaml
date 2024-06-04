@@ -1,5 +1,5 @@
 runtime: python39
-service: guest-reservasihotel-admin
+service: guest-dua-reservasihotel
 
 handlers:
 - url: /
