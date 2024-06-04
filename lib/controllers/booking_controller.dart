@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fp_fe_reservasihotel_guest/models/roomtype/room_type.dart';
-import 'package:fp_fe_reservasihotel_guest/services/booking_service.dart';
 import 'package:get/get.dart';
 
+import '../models/roomtype/room_type.dart';
+import '../services/booking_service.dart';
 import '../services/room_type_service.dart';
 
 class BookingController extends GetxController {

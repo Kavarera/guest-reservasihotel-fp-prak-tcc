@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import 'package:fp_fe_reservasihotel_guest/core/routes/api_routes.dart';
 import 'package:http/http.dart' as http;
+
+import '../core/routes/api_routes.dart';
 
 class BookingService {
   Future<Map<String, dynamic>> postBooking(

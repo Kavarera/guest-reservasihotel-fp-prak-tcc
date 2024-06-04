@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:fp_fe_reservasihotel_guest/core/routes/api_routes.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
+import '../core/routes/api_routes.dart';
 import '../models/roomtype/room_type.dart';
 
 class RoomTypeService {

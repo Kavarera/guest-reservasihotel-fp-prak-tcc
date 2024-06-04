@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fp_fe_reservasihotel_guest/core/routes/app_routes.dart';
 import 'package:get/get.dart';
+
+import 'core/routes/app_routes.dart';
 
 void main() {
   runApp(const MyApp());

@@ -4,11 +4,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:fp_fe_reservasihotel_guest/controllers/booking_controller.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
+import '../../controllers/booking_controller.dart';
 import '../../models/roomtype/room_type.dart';
 
 class LandingPage extends StatelessWidget {
